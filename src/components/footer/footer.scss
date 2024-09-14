@@ -6,6 +6,7 @@
     align-items: center;
 
     background-color: rgb(178,215,234, 0.8);
+    border-top: 1px solid rgba(0,0,0,1);
 
     min-height: 530px;
     width: 100%;
@@ -13,6 +14,9 @@
 
 .desc-text {
     font-family: gladif, sans-serif;
+
+    margin-bottom: 0;
+    margin-top: 100px;
 
     font-size: xxx-large;
     color: #333333;

@@ -11,7 +11,6 @@ function HomePage() {
     return (
         <main className='home-page-main'>
             <div className='home-page-div'>
-                <Header />
                 <section className='info-card-section'>
                     <InfoCard />
                 </section>

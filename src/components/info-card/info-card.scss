@@ -2,6 +2,7 @@
 
 .info-card-div {
     @include flex-layout;
+    justify-content: space-between;
 
     border: 1px solid #000000;
 
@@ -11,5 +12,5 @@
     position: relative;
     z-index: 3;
 
-    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 0.9);
 }
