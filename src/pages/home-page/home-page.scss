@@ -1,20 +1,26 @@
-@import '../../styles';
+@import "../../styles";
+
+.home-page-main {
+   flex-grow: 1;
+}
 
 .home-page-div {
-    @include flex-layout;
+   @include flex-layout;
 
-    flex-direction: column;
-    justify-content: space-between;
+   flex-grow: 1;
 
-    height: 100%;
+   flex-direction: column;
+   justify-content: space-between;
 
+   height: 100%;
 }
 
 .info-card-section {
-    @include flex-layout;
+   @include flex-layout;
 
-    position: absolute;
-    top: 250px;
-    z-index: 3;
+   //    position: absolute;
+   //    top: 250px;
+   //    z-index: 3;
+
+   margin: 125px 0 -50px;
 }
-

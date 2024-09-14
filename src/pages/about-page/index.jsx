@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './about-page.scss';
-import Button from '../../components/button';
+
 
 function AboutPage() {
     return(

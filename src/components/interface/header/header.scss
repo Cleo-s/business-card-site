@@ -1,0 +1,122 @@
+@import "../../../styles/";
+
+.header-div {
+   @include flex-layout;
+
+   justify-content: space-between;
+
+   border-bottom: 1px solid #2b313b;
+   background-color: rgba(238, 229, 202, 0.8);
+
+   width: 100%;
+
+   padding: 50px 40px;
+
+   box-sizing: border-box;
+
+   position: relative;
+   z-index: 3;
+}
+
+.home-page-title {
+   @include flex-layout;
+
+   font-family: robotoBoldItalicFont, sans-serif;
+   font-size: 40px;
+   color: #333333;
+}
+
+.button-section {
+   @include flex-layout($gap: 8px);
+}
+
+.button {
+   @include button;
+   @include flex-layout;
+
+   padding: 8px 24px;
+
+   border-radius: 40px;
+   border: 1px solid transparent;
+
+   font-family: gladif, sans-serif;
+   font-size: x-large;
+   color: #333333;
+
+   transition: border 0.2s ease-in-out;
+
+   &:hover {
+      border: 1px solid rgba(black, 0.8);
+      transition: border 0.2s ease-in-out;
+   }
+}
+
+// .button.homepage {
+//    @include button-layout;
+//    @include flex-layout;
+
+//    margin: 0 auto;
+//    margin-right: 20px;
+
+//    width: 250px;
+
+//    font-family: gladif, sans-serif;
+//    font-size: x-large;
+//    color: #333333;
+// }
+
+// .button.about {
+//    @include button-layout;
+//    @include flex-layout;
+
+//    margin: 0 auto;
+//    margin-right: 20px;
+
+//    width: 150px;
+
+//    font-family: gladif, sans-serif;
+//    font-size: x-large;
+//    color: #333333;
+// }
+
+// .button.contact {
+//    @include button-layout;
+//    @include flex-layout;
+
+//    margin: 0 auto;
+//    margin-right: 20px;
+
+//    width: 250px;
+
+//    font-family: gladif, sans-serif;
+//    font-size: x-large;
+//    color: #333333;
+// }
+
+// .button.blog {
+//    @include button-layout;
+//    @include flex-layout;
+
+//    margin: 0 auto;
+//    margin-right: 20px;
+
+//    width: 100px;
+
+//    font-family: gladif, sans-serif;
+//    font-size: x-large;
+//    color: #333333;
+// }
+
+// .button.for-doctors {
+//    @include button-layout;
+//    @include flex-layout;
+
+//    margin: 0 auto;
+//    margin-right: 50px;
+
+//    width: 200px;
+
+//    font-family: gladif, sans-serif;
+//    font-size: x-large;
+//    color: #333333;
+// }

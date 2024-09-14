@@ -1,0 +1,54 @@
+@import "../../../styles";
+
+.footer {
+   @include flex-layout(column, center, center, 48px);
+
+   background-color: rgb(178, 215, 234);
+   border-top: 1px solid rgba(0, 0, 0, 1);
+
+   box-sizing: border-box;
+
+   padding: 140px 0;
+   width: 100%;
+}
+
+.desc-text {
+   font-family: gladif, sans-serif;
+
+   margin-bottom: 0;
+
+   font-size: xxx-large;
+   color: #333333;
+}
+
+.desc-button-section {
+   @include flex-layout;
+
+   margin: 0;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.desc-section {
+   @include flex-layout(column, space-around, $gap: 8px);
+}
+
+.transparent-desc-text {
+   font-family: gladif, sans-serif;
+
+   font-size: xx-large;
+
+   color: rgb(0, 0, 0, 0.5);
+}
+
+.button.about {
+   margin-right: 15px;
+}
+
+.button.for-doctors {
+   margin: 0;
+}
+
+.button.contact {
+   margin-right: 10px;
+}

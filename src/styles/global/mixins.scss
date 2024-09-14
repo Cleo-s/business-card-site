@@ -1,27 +1,39 @@
-@import './varibles.scss';
-@import './fonts.scss';
+@import "./varibles.scss";
+@import "./fonts.scss";
 
 @mixin button-layout {
-    min-width: 50px;
-    height: 50px;
+   min-width: 50px;
+   height: 50px;
 
-    background-color: transparent;
-    border: 1px solid rgb(118, 200, 167, 0);
-    border-radius: 50px;
-    transition: border 0.3s ease;
+   background-color: transparent;
+   border: 1px solid rgb(118, 200, 167, 0);
+   border-radius: 50px;
+   transition: border 0.3s ease;
 
-    font-family: robotoRegularFont;
-    color: #A0A0A0;
+   font-family: robotoRegularFont;
+   color: #a0a0a0;
 
-    &:hover {
-        outline: 1px #5C6473;
-        cursor: pointer;
+   &:hover {
+      outline: 1px #5c6473;
+      cursor: pointer;
 
-        border: 1px solid #5C6473;
-        border-radius: 50px;
+      border: 1px solid #5c6473;
+      border-radius: 50px;
 
-        color: #000000;
-    }
+      color: #000000;
+   }
+}
+
+@mixin button {
+   cursor: pointer;
+
+   background-color: transparent;
+
+   border: none;
+
+   &:focus {
+      outline: none;
+   }
 }
 
 @mixin flex-layout(

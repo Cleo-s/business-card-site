@@ -1,25 +1,29 @@
-import React from 'react';
-import Header from '../../components/header/index';
-import BodySpan from '../../components/body-span/index';
-import InfoCard from '../../components/info-card';
-import Footer from '../../components/footer';
+import React from "react";
+// import BodySpan from "../../components/body-span/index";
 
-import './home-page.scss';
-import Copyright from '../../components/copyright';
+import { Footer, Header, InfoCard } from "../../components/interface";
+
+import "./home-page.scss";
+// import Copyright from "../../components/copyright";
 
 function HomePage() {
-    return (
-        <main className='home-page-main'>
-            <div className='home-page-div'>
-                <section className='info-card-section'>
-                    <InfoCard />
-                </section>
-                <BodySpan/>
-                <Footer/>
-                <Copyright/>
+   return (
+      <>
+         <Header />
+
+         <main className="home-page-main">
+            <div className="home-page-div">
+               <section className="info-card-section">
+                  <InfoCard />
+               </section>
+               {/* <BodySpan /> */}
+               {/* <Copyright /> */}
             </div>
-        </main>
-    )
+         </main>
+
+         <Footer />
+      </>
+   );
 }
 
 export default HomePage;
