@@ -1,12 +1,27 @@
 import React from 'react';
 
 import './about-page.scss';
+import { Footer, Header } from '../../components/interface';
 
 
 function AboutPage() {
     return (
-        <div className='about-div'>
-            <p className='h1-about'>
+        <>
+            <Header />
+            <div className='about-div'>
+                <section className='info-cards-section'>
+                    <div className='education-label-div'>
+                        Освіта
+                        <div className='education-div'>
+                            Я лікар-ендокринолог з багаторічним досвідом роботи в галузі медицини.
+                            Я закінчила Харківський національний медичний університет у 2001 році
+                            та продовжила свою кар'єру в галузі внутрішньої медицини.
+                        </div>
+                    </div>
+                    <div className='expirience-div'></div>
+                    <div className='for-patients-div'></div>
+                </section>
+                {/* <p className='h1-about'>
             Доброго дня!
             
             Я лікар-ендокринолог з багаторічним досвідом роботи в галузі медицини.
@@ -20,8 +35,10 @@ function AboutPage() {
             Звертайтесь до мене за консультацією або лікуванням.
             
             З повагою, Олена Христенко
-            </p>
-        </div>
+            </p> */}
+            </div>
+            <Footer />
+        </>
     )
 }
 
