@@ -5,7 +5,7 @@ import './for-doctors-page.scss';
 function ForDoctorsPage() {
 
     return(
-        <h1 className='h1-about'>For Doctors page</h1>
+        <h1 className='h1-for-doctors'>For Doctors page</h1>
     )
 }
 

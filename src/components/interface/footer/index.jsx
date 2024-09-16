@@ -29,7 +29,6 @@ export const Footer = () => {
                Зв'яжіться зі мною як найшвидше:
             </h2>
          </section>
-         {/* // TODO Change this section for flexbox instead of margins */}
          <section className="desc-button-section">
             <Button
                children={"Про мене"}
@@ -48,6 +47,17 @@ export const Footer = () => {
                onClick={handleForDoctors}
             />
          </section>
+
+         <div className='copyright-div'>
+            <p>Website design developed by <strong>
+               Cleo's Group
+            </strong>
+            </p>
+            <p>Copyright © <strong>
+               Cleo's Group
+            </strong>
+            </p>
+         </div>
       </footer>
    );
 };

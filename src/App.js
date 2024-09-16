@@ -6,14 +6,15 @@ import AboutPage from "./pages/about-page";
 import BlogPage from "./pages/blog-page";
 import ContactMePage from "./pages/contact-page";
 import ForDoctorsPage from "./pages/for-doctors-page";
-// import { Header } from "./components/interface";
+import { Header } from "./components/interface";
+import { Footer } from "./components/interface";
 
 import "./App.scss";
 
 function App() {
    return (
       <div className="App">
-         {/* <Header /> */}
+         <Header />
          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -21,6 +22,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/for-doctors" element={<ForDoctorsPage />} />
          </Routes>
+         <Footer />
       </div>
    );
 }

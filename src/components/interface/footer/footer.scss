@@ -8,12 +8,12 @@
 
    box-sizing: border-box;
 
-   padding: 140px 0;
+   padding-top: 100px;
    width: 100%;
 }
 
 .desc-text {
-   font-family: gladif, sans-serif;
+   font-family: RalewayRegular, sans-serif;
 
    margin-bottom: 0;
 
@@ -22,33 +22,69 @@
 }
 
 .desc-button-section {
-   @include flex-layout;
+   @include flex-layout(space-evenly);
 
-   margin: 0;
+   gap: 20px;
+
+   padding: 0 20px;
    flex-direction: row;
    justify-content: space-around;
 }
 
+.desc-button-section button {
+   border: 1px solid rgba(51, 51, 51, 0.1);
+}
+
 .desc-section {
    @include flex-layout(column, space-around, $gap: 8px);
+
+   padding-top: 50px;
 }
 
 .transparent-desc-text {
-   font-family: gladif, sans-serif;
+   font-family: RalewayRegular, sans-serif;
+
+   padding-top: 20px;
 
    font-size: xx-large;
 
    color: rgb(0, 0, 0, 0.5);
 }
 
-.button.about {
-   margin-right: 15px;
+.copyright-div {
+   @include flex-layout(row, space-between, center);
+
+   border-top: 1px solid rgba(0, 0, 0, 1);
+
+   background-color: rgba(51,51,51,0.8);
+
+   width: 100%;
+   height: 75px;
 }
 
-.button.for-doctors {
-   margin: 0;
+.copyright-div p { 
+   padding: 0 100px;
+
+   font-family: MerriweatherRegular, sans-serif;
 }
 
-.button.contact {
-   margin-right: 10px;
+.button {
+   @include button;
+   @include flex-layout;
+
+   padding: 10px 24px;
+
+   border-radius: 40px;
+   border: 1px solid transparent;
+
+   font-family: RalewayRegular, sans-serif;
+   font-size: x-large;
+   color: #333333;
+
+   transition: border 0.3s ease-in-out;
+
+   &:hover {
+      border: 1px solid rgba(black, 0.8);
+      transition: border 0.3s ease-in-out;
+   }
 }

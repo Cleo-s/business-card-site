@@ -9,7 +9,6 @@ import "./home-page.scss";
 function HomePage() {
    return (
       <>
-         <Header />
 
          <main className="home-page-main">
             <div className="home-page-div">
@@ -21,7 +20,6 @@ function HomePage() {
             </div>
          </main>
 
-         <Footer />
       </>
    );
 }

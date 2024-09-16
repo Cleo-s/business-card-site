@@ -21,33 +21,37 @@
 .home-page-title {
    @include flex-layout;
 
-   font-family: robotoBoldItalicFont, sans-serif;
+   font-family: RalewayRegular, sans-serif;
    font-size: 40px;
    color: #333333;
 }
 
 .button-section {
-   @include flex-layout($gap: 8px);
+   @include flex-layout($gap: 20px);
+}
+
+.button-section button {
+   border: 1px solid rgba(51, 51, 51, 0.1);
 }
 
 .button {
    @include button;
    @include flex-layout;
 
-   padding: 8px 24px;
+   padding: 10px 24px;
 
    border-radius: 40px;
    border: 1px solid transparent;
 
-   font-family: gladif, sans-serif;
+   font-family: RalewayRegular, sans-serif;
    font-size: x-large;
    color: #333333;
 
-   transition: border 0.2s ease-in-out;
+   transition: border 0.3s ease-in-out;
 
    &:hover {
       border: 1px solid rgba(black, 0.8);
-      transition: border 0.2s ease-in-out;
+      transition: border 0.3s ease-in-out;
    }
 }
 

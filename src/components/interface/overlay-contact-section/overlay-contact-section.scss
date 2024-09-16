@@ -1,3 +1,5 @@
+@import '../../../styles';
+
 .overlay-contact-section {
     display: flex;
     flex-direction: column;
@@ -11,10 +13,11 @@
 }
 
 .contact-me {
-    font-family: gladif, sans-serif;
+    @include flex-layout(row, flex-start, center);
+
+    font-family: MerriweatherRegular, sans-serif;
     font-size: 40px;
 
-    margin: 0 auto;
     color: #333333;
 }
 
@@ -30,3 +33,37 @@
 
     background-color: rgba(0,0,0,1);
 }
+
+.buttons-section {
+    @include flex-layout(column, center, flex-start);
+
+    gap: 16px;
+}
+
+.buttons-section button {
+    border: 1px solid rgba(238, 229, 202, 0.8);
+
+    padding: 10px 20px;
+    gap: 8px;
+}
+
+.button {
+    @include button;
+    @include flex-layout;
+ 
+    padding: 10px 24px;
+ 
+    border-radius: 40px;
+    border: 1px solid transparent;
+ 
+    font-family: RalewayRegular, sans-serif;
+    font-size: x-large;
+    color: #333333;
+ 
+    transition: border 0.3s ease-in-out;
+ 
+    &:hover {
+       border: 1px solid rgba(black, 0.8);
+       transition: border 0.3s ease-in-out;
+    }
+ }

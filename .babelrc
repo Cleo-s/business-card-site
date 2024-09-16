@@ -1,0 +1,17 @@
+{
+   "presets": [
+      [
+         "@babel/preset-react",
+         {
+            "runtime": "automatic"
+         }
+      ],
+      // "@babel/env",
+      //"@babel/typescript"
+      // "@babel/react"
+   ],
+   // "plugins": [
+      // "@babel/transform-class-properties",
+      // "@babel/transform-object-rest-spread"
+   // ]
+}
