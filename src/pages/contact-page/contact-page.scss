@@ -1,8 +1,98 @@
-.h1-contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+@import '../../styles';
+
+.main-contact-page {
+    flex-grow: 1;
+
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url('../../../public/background-hospital-about.jpg');
+}
+
+.input-request-div {
+    @include flex-layout(column, center, center);
+
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10%;
+
+    background-color: $white-color;
+
+    width: 500px;
+    height: 100%;
 
     margin: 0 auto;
+}
+
+.p-user-name-request {
+    @include flex-layout(row, flex-start, center, $gap: 8px);
+
+    width: 300px;
+
+    padding-top: 10px;
+
+    text-align: center;
+    font-family: RalewayRegular, sans-serif;
+}
+
+.p-short-define-request {
+    @include flex-layout(row, flex-start, center, $gap: 8px);
+
+    width: 300px;
+
+    padding-top: 10px;
+
+    text-align: center;
+    font-family: RalewayRegular, sans-serif;
+}
+
+.p-full-define-request {
+    @include flex-layout(row, flex-start, center, $gap: 8px);
+
+    width: 300px;
+
+    padding-top: 10px;
+
+    text-align: center;
+    font-family: RalewayRegular, sans-serif;
+}
+
+.short-define-request {
+    @include flex-layout(row, center, center, $gap: 8px);
+
+    font-family: MerriWeatherRegular, sans-serif;
+
+    width: 300px;
+    height: 20px;
+
+    border: 1px solid $black-color;
+    border-radius: 5px;
+}
+
+.full-define-request {
+    @include flex-layout(row, center, center, $gap: 8px);
+
+    font-family: MerriWeatherRegular, sans-serif;
+    direction: ltr;
+    text-align: left;
+
+    width: 300px;
+    height: 250px;
+
+    border: 1px solid $black-color;
+    border-radius: 10%;
+}
+
+.user-name-request {
+    @include flex-layout(row, center, center, $gap: 8px);
+
+    font-family: MerriWeatherRegular, sans-serif;
+
+    width: 300px;
+    height: 20px;
+
+    border: 1px solid $black-color;
+    border-radius: 5px;
 }

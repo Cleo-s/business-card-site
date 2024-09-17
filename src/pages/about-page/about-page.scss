@@ -1,70 +1,181 @@
 @import "../../styles";
 
-.h1-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    font-family: RalewayItalicLight, sans-serif;
-
-    margin: 0 auto;
-}
-
 .about-div {
     @include flex-layout(column, center, center);
     text-align: center;
-
+    
     width: 100%;
     height: 100%;
-
+    
     padding: 50px 0;
-
+    
     font-size: xx-large;
 }
 
-.education-label-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.info-cards-section {
+    @include flex-layout(row, space-around, center, $gap: 24px);
+}
 
-    font-family: RalewayRegular, sans-serif;
+.p-text-education {
+    @include flex-layout(column, center, center);
+
+    font-family: RaleWayRegular, sans-serif;
     text-align: center;
+}
+
+.p-text-expirience {
+    @include flex-layout(column, center, center);
+
+    font-family: RaleWayRegular, sans-serif;
+    text-align: center;
+}
+
+.p-text-for-patients {
+    @include flex-layout(column, center, center);
+
+    font-family: RaleWayRegular, sans-serif;
+    text-align: center;
+}
+
+.education-label-div {
+    @include flex-layout(row, center, center);
 
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 10%;
 
     padding: 10px 10px;
 
-    transition: all 1s ease-in-out;
+    // transition: all 1s ease-in-out;
 
     background-color: rgba(238, 229, 202, 0.8);
-    
+
     .education-div {
+        display: none;
+        height: 10px;
+
+        transition: height 0.5s ease-in-out;
+    }
+
+    &:hover {
+
+        border: none;
+        padding: 0;
+
+        .p-text-education {
+            display: none;
+        }
+
+        .education-div {
+            @include flex-layout(column, center, center);
+
+            // transition: all 1s ease-in-out;
+
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+            transition: height 0.5s ease-in-out;
+
+            padding: 10px 10px;
+
+            font-family: RalewayItalicLight, sans-serif;
+
+            background-color: rgba(255, 255, 255, 0.8);
+
+            border: 1px solid $black-color;
+            border-radius: 10%;
+        }
+    }
+}
+
+.expirience-label-div {
+    @include flex-layout(column, center, center);
+
+    border: 1px solid $black-color;
+    border-radius: 10%;
+
+    padding: 10px 10px;
+
+    background-color: $primary-color;
+
+    .expirience-div {
+        display: none;
+
+        height: 10px;
+    }
+
+    &:hover {
+
+        border: none;
+        padding: 0;
+
+        .p-text-expirience {
+            display: none;
+        }
+
+        .expirience-div {
+            @include flex-layout(column, center, center);
+
+            transition: height 1s ease-in-out;
+
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+            padding: 10px 10px;
+
+            font-family: RalewayItalicLight, sans-serif;
+
+            background-color: rgba(255, 255, 255, 0.8);
+
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            border-radius: 10%;
+        }
+    }
+}
+
+.for-patients-label-div {
+    @include flex-layout(row, center, center);
+
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10%;
+
+    padding: 10px 10px;
+
+    // transition: all 1s ease-in-out;
+
+    background-color: rgba(238, 229, 202, 0.8);
+
+    .for-patients-div {
         display: none;
     }
 
     &:hover {
-        .education-div {
-            @include flex-layout(column, center, center);
-        
-            transition: all 1s ease-in-out;
-            
-            text-align: center;
-            width: 500px;
-            height: 450px;
-        
-            padding: 0 10px;
-        
-            font-family: RalewayItalicLight, sans-serif;
-        
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            border-radius: 10%;
+
+        border: none;
+        padding: 0;
+
+        .p-text-for-patients {
+            display: none;
         }
 
-        .education-label-div {
-            display: none;
+        .for-patients-div {
+            @include flex-layout(column, center, center);
+
+            // transition: all 1s ease-in-out;
+
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+            padding: 20px 20px;
+
+            font-family: RalewayItalicLight, sans-serif;
+
+            background-color: rgba(255, 255, 255, 0.8);
+
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            border-radius: 10%;
         }
     }
 }
