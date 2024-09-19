@@ -25,7 +25,7 @@ function ContactMePage() {
     
     const handleFullValueSave = (e) => {
         
-        setFullRequestValue(e.target.value);
+        (e.target.value);
     }
 
     const handleNameValue = (e) => {
