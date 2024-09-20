@@ -6,6 +6,7 @@ import AboutPage from "./pages/about-page";
 import BlogPage from "./pages/blog-page";
 import ContactMePage from "./pages/contact-page";
 import ForDoctorsPage from "./pages/for-doctors-page";
+
 import "./App.scss";
 
 function App() {

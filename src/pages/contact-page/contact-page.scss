@@ -13,25 +13,60 @@
 }
 
 .input-request-div {
-    @include flex-layout(column, center, center);
+    @include flex-layout(row, center, center, $gap: 48px);
 
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 10%;
+    overflow: hidden;
+    
+    width: fit-content;
+    height: fit-content;
 
-    background-color: $white-color;
-
-    width: 500px;
-    height: 100%;
+    padding: 50px 0;
 
     margin: 0 auto;
+}
+
+.slide-section-one {
+    @include flex-layout(column, flex-start, center);
+
+    border: 1px solid $black-color;
+    border-radius: 10px;
+
+    background-color: $white-color;
+    
+    height: 500px;
+    width: 500px;
+}
+
+.slide-section-two {
+
+    @include flex-layout(column, center, center);
+
+    border: 1px solid $black-color;
+    border-radius: 10px;
+
+    background-color: $white-color;
+    
+    height: 500px;
+    width: 500px;
 }
 
 .p-user-name-request {
     @include flex-layout(row, flex-start, center, $gap: 8px);
 
-    width: 300px;
+    padding-top: 10px;
+
+    font-size: 30px;
+
+    text-align: center;
+    font-family: RalewayRegular, sans-serif;
+}
+
+.p-user-phone-request {
+    @include flex-layout(row, flex-start, center, $gap: 8px);
 
     padding-top: 10px;
+
+    font-size: 30px;
 
     text-align: center;
     font-family: RalewayRegular, sans-serif;
@@ -39,8 +74,6 @@
 
 .p-short-define-request {
     @include flex-layout(row, flex-start, center, $gap: 8px);
-
-    width: 300px;
 
     padding-top: 10px;
 
@@ -50,8 +83,6 @@
 
 .p-full-define-request {
     @include flex-layout(row, flex-start, center, $gap: 8px);
-
-    width: 300px;
 
     padding-top: 10px;
 
@@ -64,8 +95,22 @@
 
     font-family: MerriWeatherRegular, sans-serif;
 
-    width: 300px;
+    width: 200px;
     height: 20px;
+
+    border: 1px solid $black-color;
+    border-radius: 5px;
+}
+
+.user-phone-request {
+    @include flex-layout(row, center, center, $gap: 8px);
+
+    font-family: MerriWeatherRegular, sans-serif;
+
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 35px;
 
     border: 1px solid $black-color;
     border-radius: 5px;
@@ -78,8 +123,8 @@
     direction: ltr;
     text-align: left;
 
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 100px;
 
     border: 1px solid $black-color;
     border-radius: 10%;
@@ -90,9 +135,20 @@
 
     font-family: MerriWeatherRegular, sans-serif;
 
-    width: 300px;
-    height: 20px;
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 35px;
 
     border: 1px solid $black-color;
     border-radius: 5px;
+}
+
+.next-slide-button {
+    @include flex-layout(row, center, center); 
+
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 40px;
+
+    box-sizing: border-box;
 }
