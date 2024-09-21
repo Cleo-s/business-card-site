@@ -1,6 +1,6 @@
 @import '../../styles';
 
-.main-contact-page {
+.contact-page-main {
     flex-grow: 1;
 
     height: 100%;
@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
 
-    background-image: url('../../../public/background-hospital-about.jpg');
+    background-image: url('../../assets/images/background-hospital-contact-page.jpg');
 }
 
 .input-request-div {

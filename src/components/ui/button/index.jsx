@@ -5,7 +5,7 @@ import './button.scss';
 export const Button = ({ children, className, icon, onClick}) => {
     return (
         <button className={`button + ${className}`} onClick={onClick}>
-            {children}
+            {icon ? children : icon}
         </button>
     )
 }

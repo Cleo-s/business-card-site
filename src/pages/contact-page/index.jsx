@@ -27,7 +27,7 @@ function ContactMePage() {
     const handleSendRequest = (e) => {
         e.preventDefault();
 
-        EmailJS.send('service_l0qhval', 'template_9w0rrf8', {
+        EmailJS.send('service_2lp78pr', 'template_hfixmjj', {
             toName: 'Михайло',
             fromName: userNameValue,
             toEmail: 'cleo.mics@gmail.com',
@@ -35,15 +35,15 @@ function ContactMePage() {
             fullMessage: fullRequestValue,
             phoneNumber: userPhoneValue,
         }, {
-            publicKey: 'vVlNxVFN_vLE94aCE'
+            publicKey: 'C-5y-d4eKELO6GqiO'
         })
-        .then((response) => {
-            alert('Sent!', response.status)
-        })
-        .catch((error) => {
-            alert('Oops...', error)
-            console.log(error)
-        });
+            .then((response) => {
+                alert('Sent!', response.status)
+            })
+            .catch((error) => {
+                alert('Oops...', error)
+                console.log(error)
+            });
     };
 
     const handleShortValueSave = (e) => {
@@ -71,67 +71,65 @@ function ContactMePage() {
     }
 
     return (
-        <>
+        <main className='contact-page-main'>
             <Header />
-            <main className='main-contact-page'>
-                <div className='input-request-div'>
-                    <div className='slide-section-one'>
-                        <p className='p-user-name-request'>
-                            Ваше Ім'я:
-                        </p>
-                        <Input
-                            className='user-name-request'
-                            type='text'
-                            placeholder=''
-                            value={userNameValue}
-                            onChange={handleNameValue}
-                        />
+            <div className='input-request-div'>
+                <div className='slide-section-one'>
+                    <p className='p-user-name-request'>
+                        Ваше Ім'я:
+                    </p>
+                    <Input
+                        className='user-name-request'
+                        type='text'
+                        placeholder=''
+                        value={userNameValue}
+                        onChange={handleNameValue}
+                    />
 
-                        <p className='p-user-phone-request'>
-                            Ваш номер телефону:
-                        </p>
-                        <Input
-                            className='user-phone-request'
-                            type='tel'
-                            placeholder=''
-                            value={userPhoneValue}
-                            onChange={handlePhoneValue}
-                        />
+                    <p className='p-user-phone-request'>
+                        Ваш номер телефону:
+                    </p>
+                    <Input
+                        className='user-phone-request'
+                        type='tel'
+                        placeholder=''
+                        value={userPhoneValue}
+                        onChange={handlePhoneValue}
+                    />
 
-                        <Button className='next-slide-button' onClick={handleSlideChange}>
-                            Продовжити
-                        </Button>
-                    </div>
-                    <div className='slide-section-two'>
-                        <p className='p-short-define-request'>
-                            Кратко опишіть ваше звернення:
-                        </p>
-                        <Input
-                            className='short-define-request'
-                            type='text'
-                            placeholder=''
-                            value={shortRequestValue}
-                            onChange={handleShortValueSave}
-                        />
-                        <p className='p-full-define-request'>
-                            Детально опишіть що вас турбує:
-                        </p>
-                        <Input
-                            className='full-define-request'
-                            type='text'
-                            placeholder=''
-                            value={fullRequestValue}
-                            onChange={handleFullValueSave}
-                        />
-
-                        <Button className='send-request-button' onClick={handleSendRequest}>
-                            Відправити звернення
-                        </Button>
-                    </div>
+                    <Button className='next-slide-button' onClick={handleSlideChange}>
+                        Продовжити
+                    </Button>
                 </div>
-            </main>
+                <div className='slide-section-two'>
+                    <p className='p-short-define-request'>
+                        Кратко опишіть ваше звернення:
+                    </p>
+                    <Input
+                        className='short-define-request'
+                        type='text'
+                        placeholder=''
+                        value={shortRequestValue}
+                        onChange={handleShortValueSave}
+                    />
+                    <p className='p-full-define-request'>
+                        Детально опишіть що вас турбує:
+                    </p>
+                    <Input
+                        className='full-define-request'
+                        type='text'
+                        placeholder=''
+                        value={fullRequestValue}
+                        onChange={handleFullValueSave}
+                    />
+
+                    <Button className='send-request-button' onClick={handleSendRequest}>
+                        Відправити звернення
+                    </Button>
+                </div>
+            </div>
             <Footer />
-        </>
+        </main>
     )
 }
 
