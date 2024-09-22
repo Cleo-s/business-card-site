@@ -1,0 +1,30 @@
+@import "../../styles";
+
+.main {
+   @include set-size(100%);
+   @include flex-layout(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start,
+      $gap: 0,
+      $wrap: nowrap
+   );
+
+   box-sizing: border-box;
+
+   padding: 48px;
+
+   h1 {
+      width: 100%;
+
+      border-bottom: 1px solid rgba(black, 0.1);
+   }
+
+   .modals {
+      @include flex-layout(row, flex-start, center, 12px);
+
+      box-sizing: border-box;
+
+      padding-top: 24px;
+   }
+}
