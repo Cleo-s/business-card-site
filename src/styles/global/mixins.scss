@@ -36,6 +36,26 @@
    }
 }
 
+/* ABSOLUTE */
+
+@mixin centered-absolute {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* FIXED */
+
+@mixin centered-fixed {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/*-----------------------------------------------------------------------------------*/
+
 @mixin flex-layout(
    $direction: row,
    $justify: center,
@@ -50,3 +70,49 @@
    gap: $gap;
    flex-wrap: $wrap;
 }
+
+/* SIZE */
+
+@mixin set-width($width: 0, $minWidth: 0, $maxWidth: 0) {
+   width: $width;
+   min-width: $minWidth;
+   max-width: $maxWidth;
+
+   @if $minWidth == 0 {
+      min-width: $width;
+   }
+
+   @if $maxWidth == 0 {
+      max-width: $width;
+   }
+}
+
+@mixin set-height($height: 0, $minHeight: 0, $maxHeight: 0) {
+   height: $height;
+   min-height: $minHeight;
+   max-height: $maxHeight;
+
+   @if $minHeight == 0 {
+      min-height: $height;
+   }
+
+   @if $maxHeight == 0 {
+      max-height: $height;
+   }
+}
+
+@mixin set-size($width: 0, $height: 0) {
+   width: 100%;
+   height: 100%;
+
+   @if $height == 0 {
+      height: $width;
+   }
+}
+
+@mixin set-size-strictly($width: 0, $height: 0) {
+   @include set-width($width);
+   @include set-height($height);
+}
+
+/*-----------------------------------------------------------------------------------*/

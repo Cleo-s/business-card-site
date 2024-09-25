@@ -1,0 +1,58 @@
+@import "../../../styles";
+
+.wrapper {
+   display: none;
+
+   .backdrop {
+      @include set-size(100%);
+
+      z-index: 1;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      background-color: rgba(black, 0.5);
+   }
+
+   .modal {
+      @include centered-fixed;
+
+      z-index: 2;
+   }
+}
+
+/* STATES */
+
+.opened {
+   display: block;
+}
+
+/* SIZES */
+
+.test-s {
+   width: 100px;
+   height: 100px;
+
+   border-radius: 8px;
+
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.test-m {
+   width: 200px;
+   height: 200px;
+
+   border-radius: 8px;
+
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.test-l {
+   width: 300px;
+   height: 300px;
+
+   border-radius: 8px;
+
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}

@@ -9,14 +9,14 @@ export const OverlayContactSection = () => {
    const navigate = useNavigate();
 
    const handleEmailCopy = () => {
-      navigator.clipboard.writeText('cleo.mics@gmail.com');
-      alert('Електронну адресу скопійовано');
-   }
+      navigator.clipboard.writeText("cleo.mics@gmail.com");
+      alert("Електронну адресу скопійовано");
+   };
 
    const handlePhoneNumberCopy = () => {
-      navigator.clipboard.writeText('+380685595292');
-      alert('Номер телефону скопійовано');
-   }
+      navigator.clipboard.writeText("+380685595292");
+      alert("Номер телефону скопійовано");
+   };
 
    const handleAbout = () => {
       navigate("/about");
@@ -27,19 +27,16 @@ export const OverlayContactSection = () => {
          <h2 className="contact-me">Зворотній зв'язок:</h2>
          <div className="divider" />
          <section className="buttons-section">
-            <Button
-               onClick={handleAbout}
-               className='overlay-contact-button'>
+            <Button onClick={handleAbout} className="overlay-contact-button">
                Зв'язок зі мною
             </Button>
-            <Button
-               onClick={handleEmailCopy}
-               className='overlay-email-button'>
+            <Button onClick={handleEmailCopy} className="overlay-email-button">
                Моя електронна пошта
             </Button>
             <Button
                onClick={handlePhoneNumberCopy}
-               className='oberlay-phone-number-button'>
+               className="oberlay-phone-number-button"
+            >
                Мій номер телефону
             </Button>
          </section>
