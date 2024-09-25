@@ -51,7 +51,8 @@ function AboutPage() {
                             <p className={`p-text-education ${isEducationModalOpen ? 'inactive' : ''}`}>
                                 Освіта
                             </p>
-                            {isEducationModalOpen && (<div className='education-div'>
+                            {isEducationModalOpen && (
+                            <div className='education-div'>
                                 Я лікар-ендокринолог<br />з багаторічним досвідом роботи<br />в галузі медицини.<br />
                                 Я закінчила Харківський<br />національний медичний<br />університет у 2001 році<br />
                                 та продовжила свою<br />кар'єру в галузі внутрішньої<br />медицини.
@@ -62,7 +63,7 @@ function AboutPage() {
                         className='open-modal-button'
                         onClick={handleEducationModalOpen}
                         >
-                            Детальніше
+                          {isEducationModalOpen ? 'Закрити ': 'Детальніше' }
                         </Button>
                     </section>
                     <section className='expirience-section'>
@@ -84,7 +85,7 @@ function AboutPage() {
                         className='open-modal-button'
                         onClick={handleExpirienceModalOpen}
                         >
-                            Детальніше
+                            {isExpirienceModalOpen ? 'Закрити ': 'Детальніше' }
                         </Button>
                     </section>
                     <section className='for-patients-section'>
@@ -108,7 +109,7 @@ function AboutPage() {
                         className='open-modal-button'
                         onClick={handleForPatientsModalOpen}
                         >
-                            Детальніше
+                            {isForPatientsModalOpen ? 'Закрити ': 'Детальніше' }
                         </Button>
                     </section>
                 </section>
